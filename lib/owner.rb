@@ -70,10 +70,11 @@ class Owner
 
   def sell_pets
     binding.pry 
-    self.pets[:fishes].map {|x| x.mood = "nervous"}
-    self.pets[:cats].map {|x| x.mood = "nervous"}
-    self.pets[:dogs].map {|x| x.mood = "nervous"}
-
+  self.pets.each_pair do |key, val|
+    self.pets[key].map do |x|
+      x.mood = "nervous"
+     end 
+    end 
     self.pets.clear
   end
 
