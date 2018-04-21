@@ -69,17 +69,16 @@ class Owner
   end
 
   def sell_pets
-    #binding.pry
   self.pets.each_pair do |key, val|
     self.pets[key].map do |x|
       x.mood = "nervous"
      end
-    end 
+    end
     self.pets.clear
   end
 
   def list_pets
-    #binding.pry
+    binding.pry 
     "I have #@pets[:fishes][0].count fish, #@pets[:dogs].count dog(s), and #@pets[:cat].count cat(s)."
   end
 
